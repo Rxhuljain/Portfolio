@@ -91,7 +91,7 @@ function App() {
             <ProjectCard 
               title="Project Two"
               description="Description of your second project goes here. Explain the tech stack and your role."
-              link="https://men-mental-health.vercel.app/"
+              link="https://men-mental-health.vercel.a/"
               tags={['Next.js', 'Tailwind', 'AI - Integration']}
             />
           </div>
