@@ -1,4 +1,3 @@
-
 import { Github, Mail, FileText, ChevronDown, User, Briefcase, Code, Send, Linkedin, Twitter } from 'lucide-react';
 
 function App() {
