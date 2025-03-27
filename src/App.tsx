@@ -1,8 +1,7 @@
 import { Github, Mail, FileText, ChevronDown, User, Briefcase, Code, Send, Linkedin, Twitter } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 function App() {
-
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-black text-white">
       {/* Navigation */}
@@ -17,13 +16,18 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center relative px-4 pt-16">
+      <motion.section 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="min-h-screen flex flex-col items-center justify-center relative px-4 pt-16"
+      >
         <div className="text-center space-y-8 max-w-3xl mx-auto">
           <div className="relative inline-block">
             <div className="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full"></div>
-              <h1 className="relative font-heading text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400 pb-2">
-                Kshitij Shallesh Tater
-              </h1>
+            <h1 className="relative font-heading text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400 pb-2">
+              Kshitij Shallesh Tater
+            </h1>
           </div>
           <p className="text-2xl font-light tracking-wide text-gray-300">
             Full Stack Developer | Software Engineer
@@ -53,10 +57,15 @@ function App() {
           </div>
         </div>
         <ChevronDown className="absolute bottom-8 animate-bounce w-6 h-6 text-blue-400" />
-      </section>
+      </motion.section>
 
       {/* About Section */}
-      <section className="py-32 px-4">
+      <motion.section 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="py-32 px-4"
+      >
         <div className="max-w-4xl mx-auto">
           <h2 className="font-heading text-4xl font-bold mb-12 flex items-center gap-3 group">
             <User className="w-8 h-8 group-hover:text-blue-400 transition-colors" />
@@ -66,14 +75,19 @@ function App() {
           </h2>
           <div className="bg-gray-800/30 rounded-2xl p-8 backdrop-blur-lg border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500">
             <p className="text-gray-300 leading-relaxed text-lg tracking-wide">
-              I'm a Software Engineer pursuing B.Tech in Electrical and Electronics Engineering at VIT. Skilled in Java, Node.js, React, Next.js, AWS, and Android development, I’ve interned at LG Electronics and JP Morgan Chase & Co.. I’ve built projects like a Zoom Clone, AI Voice Assistant, and Hotstar Clone, showcasing my full-stack and AI expertise. Always eager to learn and innovate! 🚀
+              I'm a Software Engineer pursuing B.Tech in Electrical and Electronics Engineering at VIT. Skilled in Java, Node.js, React, Next.js, AWS, and Android development, I’ve interned at LG Electronics and JP Morgan Chase & Co.. I’ve built projects like a Zoom Clone, AI Voice Assistant, and Hotstar Clone, showcasing my full-stack and AI expertise. Always eager to learn and innovate! �
             </p>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Projects Section */}
-      <section className="py-32 px-4 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent">
+      <motion.section 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="py-32 px-4 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent"
+      >
         <div className="max-w-4xl mx-auto">
           <h2 className="font-heading text-4xl font-bold mb-12 flex items-center gap-3 group">
             <Code className="w-8 h-8 group-hover:text-blue-400 transition-colors" />
@@ -83,23 +97,34 @@ function App() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <ProjectCard 
-              title="Project One"
-              description="Description of your first project goes here. Explain the tech stack and your role."
+              title="Voice Assistant"
+              description="A React & TypeScript AI assistant with speech recognition and text-to-speech."
               link="https://voiceassistant-ten.vercel.app/"
               tags={['React', 'TypeScript','AI - Integration']}
             />
             <ProjectCard 
-              title="Project Two"
-              description="Description of your second project goes here. Explain the tech stack and your role."
+              title="Mental Health Chatbot"
+              description="A mental health chatbot using Next.js and OpenAI API."
               link="https://men-mental-health.vercel.app/"
               tags={['Next.js', 'Tailwind', 'AI - Integration']}
             />
+            <ProjectCard 
+              title="Wroom"
+              description="A real-time video conferencing and chat features."
+              link="https://wroom-it.vercel.app/"
+              tags={['Next.js', 'Tailwind', 'WebRTC']}
+            />
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Experience Section */}
-      <section className="py-32 px-4">
+      <motion.section 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="py-32 px-4"
+      >
         <div className="max-w-4xl mx-auto">
           <h2 className="font-heading text-4xl font-bold mb-12 flex items-center gap-3 group">
             <Briefcase className="w-8 h-8 group-hover:text-blue-400 transition-colors" />
@@ -134,10 +159,15 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Contact Section */}
-      <section className="py-32 px-4 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent">
+      <motion.section 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="py-32 px-4 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent"
+      >
         <div className="max-w-4xl mx-auto">
           <h2 className="font-heading text-4xl font-bold mb-12 flex items-center gap-3 group">
             <Send className="w-8 h-8 group-hover:text-blue-400 transition-colors" />
@@ -167,7 +197,7 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Footer */}
       <footer className="py-8 bg-gray-900">
@@ -188,7 +218,12 @@ function ProjectCard({ title, description, link, tags }: {
   tags: string[];
 }) {
   return (
-    <div className="group bg-gray-800/30 rounded-2xl p-8 backdrop-blur-lg border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500">
+    <motion.div 
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="group bg-gray-800/30 rounded-2xl p-8 backdrop-blur-lg border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500"
+    >
       <h3 className="font-heading text-2xl font-semibold mb-4 group-hover:text-blue-400 transition-colors">{title}</h3>
       <p className="text-gray-300 mb-6 leading-relaxed tracking-wide">{description}</p>
       <div className="flex flex-wrap gap-2 mb-6">
@@ -204,7 +239,7 @@ function ProjectCard({ title, description, link, tags }: {
       >
         View Project
       </a>
-    </div>
+    </motion.div>
   );
 }
 
