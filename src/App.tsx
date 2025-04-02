@@ -165,7 +165,7 @@ function App() {
                 <span className="font-medium tracking-wide">Email Me</span>
               </a>
               <a 
-                href="/Resume_Kshitij.pdf"
+                href="/Resume_K.pdf"
                 className="flex items-center gap-2 bg-gray-700 hover:bg-gray-600 transition-all duration-300 px-6 py-3 rounded-lg group"
               >
                 <FileText className="w-5 h-5 group-hover:scale-110 transition-transform" />
